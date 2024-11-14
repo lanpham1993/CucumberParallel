@@ -61,20 +61,11 @@ public class SearchSteps extends BaseSteps {
 		date = selectDate(arrivalDate);
 		getDriver().findElement(By.cssSelector("span[data-date='" + date + "']")).click();
 		Thread.sleep(2000);
+
 		// quantity
 		getDriver().findElement(By.xpath("//button[contains(@title,'Add or remove travelers')]")).click();
-		// getDriver().findElement(By.xpath("//div[contains(@class,'Adults-module__wrapper___YqBUC')]//button[2]")).click()
+		Thread.sleep(2000);
 	}
-
-//	@When("user click button search")
-//	public void user_click_button_search() throws InterruptedException {
-//		WebElement e = getDriver().findElement(By.name("q"));
-//		e.sendKeys("test");
-//		Thread.sleep(2000);
-//		e.sendKeys(Keys.ENTER);
-//		Thread.sleep(2000);
-//
-//	}
 
 	@And("clicks on search button")
 	public void clicks_on_search_button() throws InterruptedException {
